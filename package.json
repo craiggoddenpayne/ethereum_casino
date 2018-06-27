@@ -1,0 +1,22 @@
+{
+  "name": "ethereum_casino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craiggoddenpayne/ethereum_casino.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/craiggoddenpayne/ethereum_casino/issues"
+  },
+  "homepage": "https://github.com/craiggoddenpayne/ethereum_casino#readme"
+}
