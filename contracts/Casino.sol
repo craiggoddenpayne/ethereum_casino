@@ -31,8 +31,8 @@ contract Casino {
     }
 
     function checkPlayerExists(address player) public view returns(bool){
-        for(uint256 i = 0; i < players.length; i++){
-            if(players[i] == player) {
+        for(uint256 playerIndex = 0; playerIndex < players.length; playerIndex++){
+            if(players[playerIndex] == player) {
                 return true;
             }
         }
@@ -64,8 +64,8 @@ contract Casino {
         address[100] memory winners; 
         uint256 count = 0; 
 
-        for(uint256 i = 0; i < players.length; i++){
-            address playerAddress = players[i];
+        for(uint256 playerIndex = 0; playerIndex < players.length; playerIndex++){
+            address playerAddress = players[playerIndex];
             if(playerInfo[playerAddress].numberSelected == numberWinner) {
                 winners[count] = playerAddress;
                 count++;
@@ -75,9 +75,9 @@ contract Casino {
 
         players.length = 0; 
         uint256 winnerEtherAmount = totalBet / winners.length; 
-        for(uint256 j = 0; j < count; j++){
-            if(winners[j] != address(0)) {
-                winners[j].transfer(winnerEtherAmount);
+        for(uint256 winnerIndex = 0; winnerIndex < count; winnerIndex++){
+            if(winners[winnerIndex] != address(0)) {
+                winners[winnerIndex].transfer(winnerEtherAmount);
             }
         }
     }
